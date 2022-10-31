@@ -1,5 +1,5 @@
 
-<div class="angular-project">
+<div class="angular-project" [ngClass]="{ snapped: buttonText === 'Oops, unSnap!' }">
     <p>angular-project works!</p>
     <h2>{{ faceSnap.firstName }}</h2>
     <h3>{{ faceSnap.lastName }}</h3>
@@ -7,7 +7,7 @@
     <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.lastName">
     <p>
-       <button (click)="onSnap()">{{ buttonText }}</button>  🤌 {{ faceSnap.id }}
+       <button (click)="onSnap()">{{ buttonText }}</button><span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.id + ', 0)' }">   🤌 {{ faceSnap.id }}</span>
     </p>
 
       <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>

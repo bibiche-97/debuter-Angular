@@ -1,5 +1,5 @@
-<app-angular-project [faceSnap]="mySnap"></app-angular-project>
-
+<!--<app-angular-project [faceSnap]="mySnap"></app-angular-project>
 <app-angular-project [faceSnap]="myfirstSnap"></app-angular-project>
 <app-angular-project [faceSnap]="myLastSnap"></app-angular-project>
-<app-angular-project [faceSnap]="myOtherSnap"></app-angular-project>
+<app-angular-project [faceSnap]="myOtherSnap"></app-angular-project>-->
+<app-angular-project *ngFor="let faceSnapElementInArray of faceSnaps" [faceSnap]="faceSnapElementInArray"></app-angular-project>
