@@ -1,0 +1,14 @@
+
+<div class="angular-project">
+    <p>angular-project works!</p>
+    <h2>{{ faceSnap.firstName }}</h2>
+    <h3>{{ faceSnap.lastName }}</h3>
+    <h3> {{ faceSnap.adress }}</h3>
+    <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.lastName">
+    <p>
+       <button (click)="onSnap()">{{ buttonText }}</button>  🤌 {{ faceSnap.id }}
+    </p>
+
+      <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
+    </div> 
